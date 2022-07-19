@@ -1,0 +1,81 @@
+<devicedata>
+	<copyright>Copyright 2022 Welton Cartel. All rights reserved.</copyright>
+	<creator>Welton Cartel</creator>
+	<manufacturer>Control4</manufacturer>
+	<name>Touchscreen Control</name>
+	<model>Navigator UI</model>
+	<created>19/07/2022 12:00 AM</created>
+	<modified>19/07/2022 12:00 AM</modified>
+	<version>1</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<combo>true</combo>
+	<small image_source="c4z">icons/device_sm.png</small>
+	<large image_source="c4z">icons/device_lg.png</large>
+	<proxies>
+		<proxy name="Touchscreen Control" image_source="c4z" large_image="icons/device_lg.png" small_image="icons/device_sm.png">TouchscreenControl</proxy>
+	</proxies>
+	<events/>
+	<config>
+		<script jit="1" file="driver.lua"/>
+		<documentation file="www/documentation/index.html"/>
+		<properties>
+			<property>
+				<name>Driver Information</name>
+				<type>LABEL</type>
+				<default>Driver Information</default>
+			</property>
+			<property>
+				<name>Driver Name</name>
+				<default/>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Driver Version</name>
+				<default/>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Debug Mode</name>
+				<type>LIST</type>
+				<items>
+					<item>Off</item>
+					<item>On</item>
+				</items>
+				<default>Off</default>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<actions/>
+		<commands>
+			<command>
+				<name>Change Room</name>
+				<description>Set Active Room on PARAM1 to: PARAM2</description>
+				<params>
+					<param>
+						<name>Touchscreen Device</name>
+						<type>DEVICE_SELECTOR</type>
+						<items>
+							<item>uidevice.c4i</item>
+						</items>
+						<multiselect>false</multiselect>
+						<default/>
+					</param>
+					<param>
+						<name>Room Selection</name>
+						<type>DEVICE_SELECTOR</type>
+						<items>
+							<item>roomdevice.c4i</item>
+						</items>
+						<multiselect>false</multiselect>
+						<default/>
+					</param>
+				</params>
+			</command>
+		</commands>
+	</config>
+	<capabilities/>
+	<connections/>
+</devicedata>
