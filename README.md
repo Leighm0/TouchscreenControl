@@ -11,3 +11,6 @@ Control4 Driver to programmatically change a T3 Touchscreen's currently active r
 #### Release Notes:
 
 - Version 1: Initial Release
+
+## Compiled Driver Available from Releases:
+https://github.com/Leighm0/TouchscreenControl/releases
